@@ -16,7 +16,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          # Chú ý: Chưa thêm cache ở bước này để làm đối chứng
+          cache: 'maven' # Dòng này kích hoạt tính năng Caching
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml
